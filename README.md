@@ -38,7 +38,7 @@
 
 # 📖 Space Travelers Hub <a name="about-project"></a>
 
-Space Travelers Hub is a ……
+Space travelers hub is a full stack web application for a company that provides commercial and scientific space travel services, utilizing the space api.The application enables users to book rockets and join selected space missions.
 
 ## 🛠 Built With <a name="built-with"></a>
 
