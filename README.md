@@ -165,6 +165,11 @@ You can deploy this project using:
 - Twitter: [@rilecodez](https://twitter.com/rileycodez)
 - LinkedIn: [rileymanda](https://www.linkedin.com/in/rileymanda/)
 
+👤 **Yared Tekle**
+
+- GitHub: [@yaredtekle](https://github.com/)
+- Twitter: [@yaredtekle](https://twitter.com/)
+- LinkedIn: [yaredtekle](https://www.linkedin.com/in/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
