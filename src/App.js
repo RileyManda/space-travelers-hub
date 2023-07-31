@@ -1,19 +1,11 @@
-import {
-  BrowserRouter, Routes, Route, Outlet,
-} from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Missions from './components/Missions';
+import Navbar from './components/Navbar';
 
 function Rockets() {
   return <div>Rockets Component</div>;
-}
-
-function Missions() {
-  return (
-    <div>
-      Missions Component
-      <Outlet />
-    </div>
-  );
 }
 
 function NotFound() {
@@ -23,11 +15,11 @@ function NotFound() {
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Rockets />}>
-          <Route path="missions" element={<Missions />}>
-            <Route path="*" element={<NotFound />} />
-          </Route>
+        <Route path="/" element={<Rockets />} />
+        <Route path="missions" element={<Missions />}>
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
