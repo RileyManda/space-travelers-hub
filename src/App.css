@@ -20,15 +20,20 @@
 .missions-table {
   border-collapse: collapse;
   width: 100%;
+  border-spacing: unset;
 }
 
 .missions-table th,
 .missions-table td {
   border: 1px solid #000;
-  padding: 8px;
+  padding: 22px;
   text-align: left;
 }
 
 .missions-table th {
   background-color: #fff;
+}
+
+.missions-table tbody tr:not(:last-child) {
+  border-bottom: 1px solid #000;
 }
