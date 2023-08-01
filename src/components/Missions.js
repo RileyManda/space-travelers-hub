@@ -30,7 +30,6 @@ const Missions = () => {
     );
   }
 
-  // Render the table
   return (
     <div className="missions-table">
       <table>
@@ -48,7 +47,6 @@ const Missions = () => {
               <td>{mission.mission_name}</td>
               <td>{mission.description}</td>
               <td>{mission.status}</td>
-
             </tr>
           ))}
         </tbody>
@@ -59,3 +57,4 @@ const Missions = () => {
 };
 
 export default Missions;
+// TODO: I will Remove double lines from table boarder

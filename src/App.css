@@ -34,6 +34,6 @@
   background-color: #fff;
 }
 
-.missions-table tbody tr:not(:last-child) {
+.missions-table tbody tr {
   border-bottom: 1px solid #000;
 }
