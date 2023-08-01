@@ -30,15 +30,29 @@ const Missions = () => {
     );
   }
 
+  // Render the table
   return (
-    <div>
-      {missions.map((mission) => (
-        <div key={mission.mission_id}>
-          <h2>{mission.mission_name}</h2>
-          <p>{mission.description}</p>
-        </div>
-      ))}
-    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Mission</th>
+          <th>Description</th>
+          <th>Status</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        {missions.map((mission) => (
+          <tr key={mission.mission_id}>
+            <td>{mission.mission_name}</td>
+            <td>{mission.description}</td>
+            <td>{mission.status}</td>
+            {/* Empty column */}
+
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 };
 
