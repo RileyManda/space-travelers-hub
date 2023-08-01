@@ -8,9 +8,13 @@ const Missions = () => {
   const isLoading = useSelector((state) => state.missions.isLoading);
   const error = useSelector((state) => state.missions.error);
 
+  const isMissionsDataAvailable = missions.length > 0;
+
   useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
+    if (!isMissionsDataAvailable) {
+      dispatch(fetchMissions());
+    }
+  }, [dispatch, isMissionsDataAvailable]);
 
   if (isLoading) {
     return <div>Loading...</div>;
