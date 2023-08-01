@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Missions from './components/Missions';
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 
 function Rockets() {
   return <div>Rockets Component</div>;
@@ -15,7 +15,7 @@ function NotFound() {
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      <Header />
       <Routes>
         <Route path="/" element={<Rockets />} />
         <Route path="missions" element={<Missions />}>
