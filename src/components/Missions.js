@@ -9,7 +9,6 @@ const Missions = () => {
   const error = useSelector((state) => state.missions.error);
 
   useEffect(() => {
-    console.log('Dispatching fetchMissions...');
     dispatch(fetchMissions());
   }, [dispatch]);
 
