@@ -6,6 +6,7 @@ const Navbar = () => (
   <nav>
     <div className="logo-container">
       <Logo />
+      <span className="logo-text">Space Travelers&apos; Hub</span>
     </div>
     <ul>
       <li>
