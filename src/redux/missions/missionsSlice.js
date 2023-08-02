@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// async thunk for fetching missions
+// Create an async thunk for fetching missions
 export const fetchMissions = createAsyncThunk(
   'missions/fetchMissions',
   async () => {
@@ -14,15 +14,6 @@ export const fetchMissions = createAsyncThunk(
   },
 );
 
-export const joinMission = createAsyncThunk(
-  'missions/joinMission',
-  async (missionId) => missionId,
-);
-
-export const leaveMission = createAsyncThunk(
-  'missions/leaveMission',
-  async (missionId) => missionId,
-);
 const initialState = {
   missions: [],
   isLoading: false,
@@ -51,16 +42,6 @@ const missionsSlice = createSlice({
       .addCase(fetchMissions.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
-      })
-      .addCase(joinMission.fulfilled, (state, action) => {
-        const missionId = action.payload;
-        state.missions = state.missions.map((mission) => (mission.mission_id === missionId
-          ? { ...mission, reserved: true } : mission));
-      })
-      .addCase(leaveMission.fulfilled, (state, action) => {
-        const missionId = action.payload;
-        state.missions = state.missions.map((mission) => (mission.mission_id === missionId
-          ? { ...mission, reserved: false } : mission));
       });
   },
 });
