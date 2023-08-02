@@ -33,7 +33,7 @@ const Missions = () => {
     );
   }
 
-  const handleJoinMission = (missionId, isReserved) => {
+  const handleJoinLeaveMission = (missionId, isReserved) => {
     if (isReserved) {
       dispatch(leaveMission(missionId));
     } else {
@@ -49,7 +49,7 @@ const Missions = () => {
             <th style={{ width: '10%' }}>Mission</th>
             <th style={{ width: '40%' }}>Description</th>
             <th style={{ width: '10%' }}>Status</th>
-            <th style={{ width: '10%' }}>Action</th>
+            <th style={{ width: '10%', color: 'transparent' }}>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -59,7 +59,7 @@ const Missions = () => {
               <td>{mission.description}</td>
               <td>
                 {mission.reserved ? (
-                  <Badge bg="success">Active member</Badge>
+                  <Badge bg="success">Active Member</Badge>
                 ) : (
                   <Badge bg="secondary">NOT A MEMBER</Badge>
                 )}
@@ -70,12 +70,16 @@ const Missions = () => {
                   <Button
                     variant="outline-danger"
                     size="sm"
-                    onClick={() => handleJoinMission(mission.mission_id, true)}
+                    onClick={() => handleJoinLeaveMission(mission.mission_id, true)}
                   >
                     Leave Mission
                   </Button>
                 ) : (
-                  <Button variant="outline-secondary" size="sm" onClick={() => handleJoinMission(mission.mission_id, false)}>
+                  <Button
+                    variant="outline-secondary"
+                    size="sm"
+                    onClick={() => handleJoinLeaveMission(mission.mission_id, false)}
+                  >
                     Join Mission
                   </Button>
                 )}
