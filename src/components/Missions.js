@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
-import { fetchMissions, joinMission } from '../redux/missions/missionsSlice';
+import { fetchMissions, joinMission, leaveMission } from '../redux/missions/missionsSlice';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -32,8 +32,12 @@ const Missions = () => {
     );
   }
 
-  const handleJoinMission = (missionId) => {
-    dispatch(joinMission(missionId));
+  const handleJoinMission = (missionId, isReserved) => {
+    if (isReserved) {
+      dispatch(leaveMission(missionId));
+    } else {
+      dispatch(joinMission(missionId));
+    }
   };
 
   return (
@@ -65,7 +69,12 @@ const Missions = () => {
                 {' '}
               </td>
               <td>
-                <Button variant="outline-secondary" onClick={() => handleJoinMission(mission.mission_id)}>Join Mission</Button>
+                <Button
+                  variant="outline-secondary"
+                  onClick={() => handleJoinMission(mission.mission_id, mission.reserved)}
+                >
+                  {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+                </Button>
                 {' '}
               </td>
             </tr>
