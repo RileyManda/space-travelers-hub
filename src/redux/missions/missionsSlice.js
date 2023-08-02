@@ -1,24 +1,15 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid'; // Import uuidv4 to generate unique IDs
 
 // async thunk for fetching missions
-export const fetchMissions = createAsyncThunk(
-  'missions/fetchMissions',
-  async () => {
-    try {
-      const response = await axios.get('https://api.spacexdata.com/v3/missions');
-      const missionsWithIds = response.data.map((mission) => ({
-        ...mission,
-        id: uuidv4(),
-      }));
-      console.log('Missions with IDs:', missionsWithIds);
-      return missionsWithIds;
-    } catch (error) {
-      throw new Error('Failed to fetch missions.');
-    }
-  },
-);
+export const fetchMissions = createAsyncThunk('missions/fetchMissions', async () => {
+  try {
+    const response = await axios.get('https://api.spacexdata.com/v3/missions');
+    return response.data;
+  } catch (error) {
+    throw new Error('Failed to fetch missions.');
+  }
+});
 
 const initialState = {
   missions: [],
@@ -30,9 +21,11 @@ const missionsSlice = createSlice({
   name: 'missions',
   initialState,
   reducers: {
-    showContent: (state) => {
-      const displayText = 'Missions states';
-      state.missions = displayText;
+    joinMission: (state, action) => {
+      const missionId = action.payload;
+      state.missions = state.missions.map((mission) => (mission.mission_id === missionId
+        ? { ...mission, reserved: true } : mission));
+      console.log('Mission Joined Successfully:', missionId);
     },
   },
   extraReducers: (builder) => {
@@ -52,5 +45,5 @@ const missionsSlice = createSlice({
   },
 });
 
-export const { showContent } = missionsSlice.actions;
+export const { joinMission } = missionsSlice.actions;
 export default missionsSlice.reducer;
