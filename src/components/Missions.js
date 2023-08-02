@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Table from 'react-bootstrap/Table';
 import { fetchMissions } from '../redux/missions/missionsSlice';
 
 const Missions = () => {
@@ -32,29 +33,26 @@ const Missions = () => {
 
   return (
     <div className="missions-table">
-      <table>
+      <Table striped bordered hover>
         <thead>
           <tr>
             <th>Mission</th>
             <th>Description</th>
             <th>Status</th>
-
           </tr>
         </thead>
         <tbody>
           {missions.map((mission) => (
-            <tr key={mission.mission_id}>
+            <tr key={mission.mission_id} style={{ background: 'black', color: 'white' }}>
               <td>{mission.mission_name}</td>
               <td>{mission.description}</td>
               <td>{mission.status}</td>
             </tr>
           ))}
         </tbody>
-      </table>
+      </Table>
     </div>
-
   );
 };
 
 export default Missions;
-// TODO: I will Remove double lines from table boarder
