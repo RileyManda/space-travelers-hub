@@ -37,9 +37,10 @@ const Missions = () => {
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th>Mission</th>
-            <th>Description</th>
-            <th>Status</th>
+            <th style={{ width: '10%' }}>Mission</th>
+            <th style={{ width: '50%' }}>Description</th>
+            <th style={{ width: '20%' }}>Status</th>
+            <th style={{ width: '20%' }}>Action</th>
           </tr>
         </thead>
         <tbody>
