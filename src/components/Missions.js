@@ -38,9 +38,9 @@ const Missions = () => {
         <thead>
           <tr>
             <th style={{ width: '10%' }}>Mission</th>
-            <th style={{ width: '50%' }}>Description</th>
-            <th style={{ width: '20%' }}>Status</th>
-            <th style={{ width: '20%' }}>Action</th>
+            <th style={{ width: '40%' }}>Description</th>
+            <th style={{ width: '10%' }}>Status</th>
+            <th style={{ width: '10%' }}>Action</th>
           </tr>
         </thead>
         <tbody>
