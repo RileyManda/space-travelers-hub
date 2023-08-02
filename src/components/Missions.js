@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge';
 import { fetchMissions, joinMission, leaveMission } from '../redux/missions/missionsSlice';
 
 const Missions = () => {
@@ -58,23 +59,26 @@ const Missions = () => {
               <td>{mission.description}</td>
               <td>
                 {mission.reserved ? (
-                  <Button variant="secondary" size="sm" disabled>
-                    Active member
-                  </Button>
+                  <Badge bg="success">Active member</Badge>
                 ) : (
-                  <Button variant="secondary" size="sm">
-                    Not A Member
-                  </Button>
+                  <Badge bg="secondary">NOT A MEMBER</Badge>
                 )}
                 {' '}
               </td>
               <td>
-                <Button
-                  variant="outline-secondary"
-                  onClick={() => handleJoinMission(mission.mission_id, mission.reserved)}
-                >
-                  {mission.reserved ? 'Leave Mission' : 'Join Mission'}
-                </Button>
+                {mission.reserved ? (
+                  <Button
+                    variant="outline-danger"
+                    size="sm"
+                    onClick={() => handleJoinMission(mission.mission_id, true)}
+                  >
+                    Leave Mission
+                  </Button>
+                ) : (
+                  <Button variant="outline-secondary" size="sm" onClick={() => handleJoinMission(mission.mission_id, false)}>
+                    Join Mission
+                  </Button>
+                )}
                 {' '}
               </td>
             </tr>
