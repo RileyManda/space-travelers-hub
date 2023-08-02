@@ -6,6 +6,7 @@
   align-items: center;
 }
 
+/* Nav header  */
 .logo-container {
   display: flex;
   align-items: center;
@@ -43,6 +44,9 @@ a {
   text-decoration: none;
 }
 
+/* Nav header END  */
+
+/* Vertical Line  */
 .upbar {
   padding-right: 1rem;
   font-size: 1rem;
@@ -58,7 +62,7 @@ a {
   margin-left: 20px;
 }
 
-/* Mission table */
+/* Missions table container */
 .missions-table-container {
   display: flex;
   justify-content: center;
