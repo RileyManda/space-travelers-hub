@@ -1,13 +1,19 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid'; // Import uuidv4 to generate unique IDs
 
-// Create an async thunk for fetching missions
+// async thunk for fetching missions
 export const fetchMissions = createAsyncThunk(
   'missions/fetchMissions',
   async () => {
     try {
       const response = await axios.get('https://api.spacexdata.com/v3/missions');
-      return response.data;
+      const missionsWithIds = response.data.map((mission) => ({
+        ...mission,
+        id: uuidv4(),
+      }));
+      console.log('Missions with IDs:', missionsWithIds);
+      return missionsWithIds;
     } catch (error) {
       throw new Error('Failed to fetch missions.');
     }

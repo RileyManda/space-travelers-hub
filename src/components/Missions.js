@@ -45,7 +45,7 @@ const Missions = () => {
         </thead>
         <tbody>
           {missions.map((mission) => (
-            <tr key={mission.mission_id} style={{ background: 'black', color: 'white' }}>
+            <tr key={mission.id} style={{ background: 'black', color: 'white' }}>
               <td>{mission.mission_name}</td>
               <td>{mission.description}</td>
               <td>
