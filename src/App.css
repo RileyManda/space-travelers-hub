@@ -11,7 +11,7 @@
 
 .nav-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
   margin-right: 20px;
   background-color: #fff;
