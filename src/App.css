@@ -12,10 +12,11 @@
 .nav-list {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   margin-right: 20px;
   background-color: #fff;
   list-style: none;
-  margin-top: -45px;
+  margin-top: -50px;
 }
 
 .nav-list li {
