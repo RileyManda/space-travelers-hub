@@ -58,13 +58,12 @@ a {
   display: flex;
   flex-direction: column;
   margin-left: 100px;
+  padding-top: 0;
 }
 
 .rnd {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding-top: 20px;
 }
 
 .rdesk {
