@@ -9,12 +9,19 @@
 .logo-container {
   display: flex;
   align-items: center;
+  margin-top: 10px;
+  margin-left: 17px;
 }
 
 .app-logo {
   width: 50px;
   height: auto;
-  margin-left: 30px;
+}
+
+.logo-text {
+  margin-left: 20px;
+  font-weight: 700;
+  font-size: 25px;
 }
 
 .nav-list {
