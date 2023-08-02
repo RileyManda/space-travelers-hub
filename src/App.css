@@ -8,3 +8,28 @@
   height: auto;
   margin-left: 30px;
 }
+
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-right: 20px;
+  background-color: #fff;
+  list-style: none;
+  margin-top: -50px;
+}
+
+.nav-list li {
+  background-color: #fff;
+  margin: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.upbar {
+  padding-right: 1rem;
+  font-size: 1rem;
+  margin-top: 15px;
+}
