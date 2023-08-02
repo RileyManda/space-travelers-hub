@@ -57,7 +57,7 @@ const Missions = () => {
             <tr key={mission.mission_id} style={{ background: 'black', color: 'white' }}>
               <td>{mission.mission_name}</td>
               <td>{mission.description}</td>
-              <td>
+              <td className="text-center align-middle">
                 {mission.reserved ? (
                   <Badge bg="success">Active Member</Badge>
                 ) : (
@@ -65,7 +65,7 @@ const Missions = () => {
                 )}
                 {' '}
               </td>
-              <td>
+              <td className="text-center align-middle">
                 {mission.reserved ? (
                   <Button
                     variant="outline-danger"
