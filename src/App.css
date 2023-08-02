@@ -49,8 +49,9 @@ a {
   margin-top: 15px;
 }
 
+/* Horizontal Line  */
 .hr {
-  border-top: 1px solid #a5a4a4;
+  border-top: 1px solid #b3b2b2;
   margin-bottom: 12px;
   margin-top: 15px;
   margin-right: 20px;
