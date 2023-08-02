@@ -49,6 +49,14 @@ a {
   margin-top: 15px;
 }
 
+.hr {
+  border-top: 1px solid #a5a4a4;
+  margin-bottom: 12px;
+  margin-top: 15px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
 /* Mission table */
 .missions-table-container {
   display: flex;
