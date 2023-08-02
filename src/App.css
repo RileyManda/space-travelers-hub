@@ -50,3 +50,35 @@ a {
   margin-right: 20px;
   margin-left: 20px;
 }
+
+/* Rocket */
+.rimg {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  margin-bottom: 90px;
+}
+
+.rnd {
+  display: flex;
+  flex-direction: column;
+  margin-top: -230px;
+  margin-left: 35px;
+}
+
+.rdesk {
+  margin-left: 400px;
+}
+
+.button {
+  background-color: blue;
+  width: 150px;
+  margin-left: 400px;
+  margin-bottom: 20px;
+}
+
+.rname {
+  margin-left: 400px;
+}
