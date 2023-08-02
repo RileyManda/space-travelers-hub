@@ -8,13 +8,18 @@ const Header = () => (
       <Logo />
       <span className="logo-text">Space Travelers&apos; Hub</span>
     </div>
-    <ul>
+    <ul className="nav-list">
       <li>
         <Link to="/">Rockets</Link>
       </li>
       <li>
         <Link to="/missions">Missions</Link>
       </li>
+      <span className="upbar">|</span>
+      <li>
+        <Link to="/profile">My Profile</Link>
+      </li>
+
     </ul>
   </nav>
 );
