@@ -55,7 +55,7 @@ const Missions = () => {
               <td>
                 {mission.reserved ? (
                   <Button variant="secondary" size="sm" disabled>
-                    Reserved
+                    Active member
                   </Button>
                 ) : (
                   <Button variant="secondary" size="sm">
