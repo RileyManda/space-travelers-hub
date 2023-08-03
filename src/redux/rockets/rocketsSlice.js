@@ -7,8 +7,8 @@ export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () =>
     return response.data.map((rocket) => ({
       id: rocket.id,
       name: rocket.rocket_name,
-      type: rocket.rocket_type,
-      flickr_images: rocket.flickr_images,
+      description: rocket.description,
+      flickr_images: rocket.flickr_images[0],
     }));
   } catch (error) {
     throw new Error('Failed to fetch rockets.');
