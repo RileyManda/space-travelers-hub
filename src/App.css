@@ -39,6 +39,7 @@
   background-color: #fff;
   margin: 15px;
   position: relative;
+  text-decoration: none;
 }
 
 .nav-list li::after {
@@ -50,10 +51,15 @@
   height: 2px;
   opacity: 0;
   transition: opacity 0.2s;
+  text-decoration: none;
 }
 
 .nav-list li.active-link::after {
   opacity: 1;
+}
+
+.nav-list li:not(.active-link)::after {
+  display: none;
 }
 
 /* Nav header END  */
