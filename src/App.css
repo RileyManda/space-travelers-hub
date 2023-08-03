@@ -151,3 +151,23 @@ a {
   border-radius: 5px;
   margin-bottom: 2px;
 }
+
+.reserved-rockets-container {
+  margin-top: -2px;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin-left: 602px;
+}
+
+.rocket-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -88px;
+}
+
+.empty-rocket {
+  margin-left: -364px;
+}
