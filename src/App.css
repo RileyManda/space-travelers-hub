@@ -97,6 +97,7 @@ a {
   margin-bottom: 192px;
   height: 179px;
 }
+
 .rnd {
   display: flex;
   flex-direction: column;
@@ -104,28 +105,33 @@ a {
   margin-left: 50px;
   margin-bottom: 80px;
 }
+
 .rdesk {
   font-size: 17px;
   margin-left: 400px;
   margin-right: 50px;
 }
+
 .button {
   background-color: blue;
   width: 150px;
   margin-left: 400px;
   margin-bottom: 20px;
 }
+
 .rname {
   margin-left: 400px;
   margin-top: -34px;
   margin-bottom: 10px;
 }
+
 .align-button {
   display: flex;
   align-items: flex-end;
   width: 150px;
   margin-left: 403px;
 }
+
 .rocketImg {
   display: flex;
   height: auto;
@@ -135,6 +141,7 @@ a {
   margin-left: -80px;
   margin-right: 45px;
 }
+
 .reserved-span {
   color: white;
   width: 50px;
