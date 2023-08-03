@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge';
 import { fetchRockets, joinRocket, leaveRocket } from '../redux/rockets/rocketsSlice';
 
 const Rockets = () => {
