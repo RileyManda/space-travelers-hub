@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Logo from './Logo';
 
 const Header = () => (
@@ -10,16 +10,15 @@ const Header = () => (
     </div>
     <ul className="nav-list">
       <li>
-        <Link to="/">Rockets</Link>
+        <NavLink exact to="/" activeClassName="active-link">Rockets</NavLink>
       </li>
       <li>
-        <Link to="/missions">Missions</Link>
+        <NavLink to="/missions" activeClassName="active-link">Missions</NavLink>
       </li>
       <span className="upbar">|</span>
       <li>
-        <Link to="/profile">My Profile</Link>
+        <NavLink to="/profile" activeClassName="active-link">My Profile</NavLink>
       </li>
-
     </ul>
   </nav>
 );
