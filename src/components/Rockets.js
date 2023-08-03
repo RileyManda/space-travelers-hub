@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Button from 'react-bootstrap/Button';
 import { fetchRockets } from '../redux/rockets/rocketsSlice';
 
 const Rockets = () => {
@@ -25,14 +26,17 @@ const Rockets = () => {
   return (
     <div className="rocketImg">
       {rockets.map((rocket) => (
-        <div key={rocket.id}>
+        <section key={rocket.id}>
           <img className="rimg" key={rocket.id} src={rocket.flickr_images} alt={rocket.name} />
-          <section className="rnd">
+          <div className="rnd">
             <h2 className="rname">{rocket.name}</h2>
             <p className="rdesk">{rocket.description}</p>
-            <button className="button" type="button">Reserve Rocket</button>
-          </section>
-        </div>
+            <div className="align-button">
+              <Button variant="primary" size="sm">Reserve Rocket</Button>
+            </div>
+
+          </div>
+        </section>
       ))}
     </div>
   );
