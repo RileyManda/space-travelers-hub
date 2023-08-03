@@ -53,7 +53,7 @@ const Rockets = () => {
                 <Button
                   variant="outline-danger"
                   size="sm"
-                  onClick={() => handleJoinLeaveRocket(rocket.rocketId, true)}
+                  onClick={() => handleJoinLeaveRocket(rocket.id, false)}
                 >
                   reserve rocket
                 </Button>
@@ -61,7 +61,7 @@ const Rockets = () => {
                 <Button
                   variant="outline-secondary"
                   size="sm"
-                  onClick={() => handleJoinLeaveRocket(rocket.RocketId, false)}
+                  onClick={() => handleJoinLeaveRocket(rocket.id, true)}
                 >
                   cancel Reservation
                 </Button>
