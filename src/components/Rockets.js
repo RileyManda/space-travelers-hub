@@ -41,19 +41,34 @@ const Rockets = () => {
             <h2 className="rname">{rocket.name}</h2>
             <p className="rdesk">{rocket.description}</p>
             <div className="align-button">
-              {rocket.reserved}
-              {' '}
-              ? (
-              <Button
-                variant="outline-danger"
-                size="sm"
-                onClick={() => handleJoinLeaveRocket(rocket.id, true)}
-              >
-                Leave Mission
-              </Button>
-              )
+            {mission.reserved ? (
+                  <Badge bg="success">reserved</Badge>
+                ) : (
+                  <Badge bg="secondary">R</Badge>
+                )}
+                {' '}
             </div>
+            <div>
+            {rocket.reserved ? (
+                  <Button
+                    variant="outline-danger"
+                    size="sm"
+                    onClick={() => handleJoinLeaveRocket(rocket.id, true)}
+                  >
+                    Cancel Reservation 
+                  </Button>
+                ) : (
+                  <Button
+                    variant="outline-secondary"
+                    size="sm"
+                    onClick={() => handleJoinLeaveMission(rocket.id, false)}
+                  >
+                    Reserve Rocket
+                  </Button>
+                )}
+                {' '}
 
+            </div>
           </div>
         </section>
       ))}
