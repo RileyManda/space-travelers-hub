@@ -9,6 +9,7 @@ export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () =>
       name: rocket.rocket_name,
       description: rocket.description,
       flickr_images: rocket.flickr_images[0],
+      reserved: false,
     }));
   } catch (error) {
     throw new Error('Failed to fetch rockets.');
@@ -34,9 +35,16 @@ const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {
-    showContent: (state) => {
-      const displayText = 'rockets states';
-      state.rockets = displayText;
+    // showContent: (state) => {
+    //   const displayText = 'rockets states';
+    //   state.rockets = displayText;
+    // },
+    showContent: (state, action) => {
+      const { id, reserved } = action.payload;
+      const rocket = state.rockets.find((rocket) => rocket.id === id);
+      if (rocket) {
+        rocket.reserved = reserved;
+      }
     },
   },
   extraReducers: (builder) => {

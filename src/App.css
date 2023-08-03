@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
 }
-
 /* Nav header  */
 .logo-container {
   display: flex;
@@ -13,18 +12,15 @@
   margin-top: 10px;
   margin-left: 17px;
 }
-
 .app-logo {
   width: 50px;
   height: auto;
 }
-
 .logo-text {
   margin-left: 18px;
   font-weight: 600;
   font-size: 25px;
 }
-
 .nav-list {
   display: flex;
   justify-content: flex-end;
@@ -34,34 +30,28 @@
   list-style: none;
   margin-top: -50px;
 }
-
 .nav-list li {
   background-color: #fff;
   margin: 15px;
 }
-
 a {
   text-decoration: none;
 }
-
 /* Nav header END  */
-
 /* Vertical Line  */
 .upbar {
   padding-right: 1rem;
   font-size: 1rem;
   margin-top: 15px;
 }
-
 /* Horizontal Line  */
 .hr {
-  border-top: 1px solid #b3b2b2;
+  border-top: 1px solid #B3B2B2;
   margin-bottom: 12px;
   margin-top: 15px;
   margin-right: 20px;
   margin-left: 20px;
 }
-
 /* Missions table container */
 .missions-table-container {
   display: flex;
@@ -70,7 +60,6 @@ a {
   margin-right: 20px;
   margin-left: 20px;
 }
-
 /* Rocket */
 .rimg {
   width: 300px;
@@ -80,47 +69,50 @@ a {
   margin-bottom: 192px;
   height: 179px;
 }
-
 .rnd {
   display: flex;
   flex-direction: column;
   margin-top: -345px;
-  margin-left: 35px;
-  margin-bottom: 60px;
+  margin-left: 50px;
+  margin-bottom: 80px;
 }
-
 .rdesk {
+  font-size: 17px;
   margin-left: 400px;
   margin-right: 50px;
 }
-
 .button {
   background-color: blue;
   width: 150px;
   margin-left: 400px;
   margin-bottom: 20px;
 }
-
 .rname {
   margin-left: 400px;
   margin-top: -34px;
   margin-bottom: 10px;
 }
-
 .align-button {
   display: flex;
   align-items: flex-end;
   width: 150px;
   margin-left: 403px;
 }
-
 .rocketImg {
   display: flex;
+  height: auto;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-left: -80px;
   margin-right: 45px;
 }
-.reserve {
+.reserved-span {
+  color: white;
+  width: 50px;
+  background: rgb(16, 182, 160);
+  font-size: 12px;
+  padding: 2px 3px;
+  border-radius: 5px;
+  margin-bottom: 2px;
 }
