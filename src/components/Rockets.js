@@ -43,31 +43,29 @@ const Rockets = () => {
             <p className="rdesk">{rocket.description}</p>
             <div className="align-button">
               {rocket.reserved ? (
-                <Badge bg="success">reserved</Badge>
+                <Badge bg="secondary">reserved</Badge>
               ) : (
-                <Badge bg="secondary">R</Badge>
+                <Badge bg="success" className="reserve">reserved</Badge>
               )}
-              {' '}
             </div>
             <div className="align-button">
               {rocket.reserved ? (
                 <Button
                   variant="outline-danger"
                   size="sm"
-                  onClick={() => handleJoinLeaveRocket(rocket.id, true)}
+                  onClick={() => handleJoinLeaveRocket(rocket.rocketId, true)}
                 >
-                  Cancel Reservation
+                  reserve rocket
                 </Button>
               ) : (
                 <Button
                   variant="outline-secondary"
                   size="sm"
-                  onClick={() => handleJoinLeaveRocket(rocket.id, false)}
+                  onClick={() => handleJoinLeaveRocket(rocket.RocketId, false)}
                 >
-                  Reserve Rocket
+                  cancel Reservation
                 </Button>
               )}
-              {' '}
 
             </div>
           </div>
