@@ -8,19 +8,22 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
-      {joinedMissionsData.length > 0 ? (
-        <Table striped bordered hover>
-          <tbody>
-            {joinedMissionsData.map((mission) => (
-              <tr key={mission.mission_id}>
-                <td>{mission.mission_name}</td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
-      ) : (
-        <p>No joined missions yet.</p>
-      )}
+      <h2 className="mission-title">My Missions</h2>
+      <div className="joined-missions-container">
+        {joinedMissionsData.length > 0 ? (
+          <Table bordered>
+            <tbody>
+              {joinedMissionsData.map((mission) => (
+                <tr key={mission.mission_id}>
+                  <td>{mission.mission_name}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        ) : (
+          <p>No joined missions yet.</p>
+        )}
+      </div>
     </div>
   );
 };

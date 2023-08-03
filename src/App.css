@@ -62,6 +62,8 @@ a {
   margin-left: 20px;
 }
 
+/* MISSIONS */
+
 /* Missions table container */
 .missions-table-container {
   display: flex;
@@ -70,6 +72,21 @@ a {
   margin-right: 20px;
   margin-left: 20px;
 }
+
+/* joined missions */
+.joined-missions-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 40%;
+  margin-left: 20px;
+}
+
+.mission-title {
+  margin-left: 20px;
+}
+
+/* joined missions END */
 
 /* Rocket */
 .rimg {
