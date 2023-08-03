@@ -50,3 +50,56 @@ a {
   margin-right: 20px;
   margin-left: 20px;
 }
+
+/* Rocket */
+.rimg {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  margin-bottom: 192px;
+  height: 179px;
+}
+
+.rnd {
+  display: flex;
+  flex-direction: column;
+  margin-top: -345px;
+  margin-left: 35px;
+  margin-bottom: 60px;
+}
+
+.rdesk {
+  margin-left: 400px;
+  margin-right: 50px;
+}
+
+.button {
+  background-color: blue;
+  width: 150px;
+  margin-left: 400px;
+  margin-bottom: 20px;
+}
+
+.rname {
+  margin-left: 400px;
+  margin-top: -34px;
+  margin-bottom: 10px;
+}
+
+.align-button {
+  display: flex;
+  align-items: flex-end;
+  width: 150px;
+  margin-left: 403px;
+}
+
+.rocketImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: -32px;
+  margin-right: 45px;
+}
+
