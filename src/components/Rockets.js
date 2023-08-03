@@ -23,15 +23,14 @@ const Rockets = () => {
     );
   }
   return (
-    <div className="rocketImg">
+    <div>
       {rockets.map((rocket) => (
         <div key={rocket.id}>
-          <img className="rimg" key={rocket.id} src={rocket.flickr_images} alt={rocket.name} />
-          <section className="rnd">
-            <h2 className="rname">{rocket.name}</h2>
-            <p className="rdesk">{rocket.description}</p>
-            <button className="button" type="button">Reserve Rocket</button>
-          </section>
+          <h2>{rocket.name}</h2>
+          <p>{rocket.type}</p>
+          {rocket.flickr_images.map((image) => (
+            <img key={image} src={image} alt={rocket.name} />
+          ))}
         </div>
       ))}
     </div>
