@@ -33,11 +33,11 @@ const Missions = () => {
     );
   }
 
-  const handleJoinLeaveMission = (missionId, isReserved) => {
+  const handleJoinLeaveMission = (missionName, isReserved) => {
     if (isReserved) {
-      dispatch(leaveMission(missionId));
+      dispatch(leaveMission(missionName));
     } else {
-      dispatch(joinMission(missionId));
+      dispatch(joinMission(missionName));
     }
   };
 
@@ -70,7 +70,7 @@ const Missions = () => {
                   <Button
                     variant="outline-danger"
                     size="sm"
-                    onClick={() => handleJoinLeaveMission(mission.mission_id, true)}
+                    onClick={() => handleJoinLeaveMission(mission.mission_name, true)}
                   >
                     Leave Mission
                   </Button>
@@ -78,7 +78,7 @@ const Missions = () => {
                   <Button
                     variant="outline-secondary"
                     size="sm"
-                    onClick={() => handleJoinLeaveMission(mission.mission_id, false)}
+                    onClick={() => handleJoinLeaveMission(mission.mission_name, false)}
                   >
                     Join Mission
                   </Button>
