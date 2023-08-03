@@ -6,15 +6,23 @@
   align-items: center;
 }
 
+/* Nav header  */
 .logo-container {
   display: flex;
   align-items: center;
+  margin-top: 10px;
+  margin-left: 17px;
 }
 
 .app-logo {
   width: 50px;
   height: auto;
-  margin-left: 30px;
+}
+
+.logo-text {
+  margin-left: 18px;
+  font-weight: 600;
+  font-size: 25px;
 }
 
 .nav-list {
@@ -36,13 +44,25 @@ a {
   text-decoration: none;
 }
 
+/* Nav header END  */
+
+/* Vertical Line  */
 .upbar {
   padding-right: 1rem;
   font-size: 1rem;
   margin-top: 15px;
 }
 
-/* Mission table */
+/* Horizontal Line  */
+.hr {
+  border-top: 1px solid #b3b2b2;
+  margin-bottom: 12px;
+  margin-top: 15px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+/* Missions table container */
 .missions-table-container {
   display: flex;
   justify-content: center;
