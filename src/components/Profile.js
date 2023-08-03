@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Table from 'react-bootstrap/Table';
 
 const Profile = () => {
   const missions = useSelector((state) => state.missions.missions);
@@ -7,16 +8,16 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
-      <h2>My Joined Missions</h2>
       {joinedMissionsData.length > 0 ? (
-        <ul>
-          {joinedMissionsData.map((mission) => (
-            <li key={mission.mission_id}>
-              {mission.mission_name}
-              {' '}
-            </li>
-          ))}
-        </ul>
+        <Table striped bordered hover>
+          <tbody>
+            {joinedMissionsData.map((mission) => (
+              <tr key={mission.mission_id}>
+                <td>{mission.mission_name}</td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
       ) : (
         <p>No joined missions yet.</p>
       )}
