@@ -1,13 +1,27 @@
 import React from 'react';
-import ListGroup from 'react-bootstrap/ListGroup';
+import { useSelector } from 'react-redux';
 
-const Profile = () => (
-  <div>
-    <ListGroup>
-      <ListGroup.Item>Mission1</ListGroup.Item>
-      <ListGroup.Item>Mission2</ListGroup.Item>
-    </ListGroup>
+const Profile = () => {
+  const missions = useSelector((state) => state.missions.missions);
+  const joinedMissionsData = missions.filter((mission) => mission.reserved);
 
-  </div>
-);
+  return (
+    <div className="profile-container">
+      <h2>My Joined Missions</h2>
+      {joinedMissionsData.length > 0 ? (
+        <ul>
+          {joinedMissionsData.map((mission) => (
+            <li key={mission.mission_id}>
+              {mission.mission_name}
+              {' '}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No joined missions yet.</p>
+      )}
+    </div>
+  );
+};
+
 export default Profile;
