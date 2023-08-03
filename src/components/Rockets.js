@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Button from 'react-bootstrap/Button';
-import { fetchRockets } from '../redux/rockets/rocketsSlice';
+import { fetchRockets, joinRocket, leaveRocket } from '../redux/rockets/rocketsSlice';
 
 const Rockets = () => {
   const dispatch = useDispatch();
@@ -23,6 +23,15 @@ const Rockets = () => {
       </div>
     );
   }
+
+  const handleJoinLeaveRocket = (rocketId, isReserved) => {
+    if (isReserved) {
+      dispatch(leaveRocket(rocketId));
+    } else {
+      dispatch(joinRocket(rocketId));
+    }
+  };
+
   return (
     <div className="rocketImg">
       {rockets.map((rocket) => (
@@ -32,7 +41,17 @@ const Rockets = () => {
             <h2 className="rname">{rocket.name}</h2>
             <p className="rdesk">{rocket.description}</p>
             <div className="align-button">
-              <Button variant="primary" size="sm">Reserve Rocket</Button>
+              {rocket.reserved}
+              {' '}
+              ? (
+              <Button
+                variant="outline-danger"
+                size="sm"
+                onClick={() => handleJoinLeaveRocket(rocket.id, true)}
+              >
+                Leave Mission
+              </Button>
+              )
             </div>
 
           </div>

@@ -14,6 +14,17 @@ export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () =>
     throw new Error('Failed to fetch rockets.');
   }
 });
+
+export const joinRocket = createAsyncThunk(
+  'rockets/joinRocket',
+  async (rocketId) => rocketId,
+);
+
+export const leaveRocket = createAsyncThunk(
+  'rockets/leaveRocket',
+  async (rocketId) => rocketId,
+);
+
 const initialState = {
   rockets: [],
   isLoading: false,
