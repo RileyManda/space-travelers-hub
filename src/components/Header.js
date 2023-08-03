@@ -1,26 +1,30 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
 
-const Header = () => (
-  <nav>
-    <div className="logo-container">
-      <Logo />
-      <span className="logo-text">Space Travelers&apos; Hub</span>
-    </div>
-    <ul className="nav-list">
-      <li>
-        <NavLink exact to="/" activeClassName="active-link">Rockets</NavLink>
-      </li>
-      <li>
-        <NavLink to="/missions" activeClassName="active-link">Missions</NavLink>
-      </li>
-      <span className="upbar">|</span>
-      <li>
-        <NavLink to="/profile" activeClassName="active-link">My Profile</NavLink>
-      </li>
-    </ul>
-  </nav>
-);
+const Header = () => {
+  const location = useLocation();
+
+  return (
+    <nav>
+      <div className="logo-container">
+        <Logo />
+        <span className="logo-text">Space Travelers&apos; Hub</span>
+      </div>
+      <ul className="nav-list">
+        <li>
+          <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>Rockets</Link>
+        </li>
+        <li>
+          <Link to="/missions" className={location.pathname === '/missions' ? 'active-link' : ''}>Missions</Link>
+        </li>
+        <span className="upbar">|</span>
+        <li>
+          <Link to="/profile" className={location.pathname === '/profile' ? 'active-link' : ''}>My Profile</Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
 export default Header;
