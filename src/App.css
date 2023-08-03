@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
 }
+
 /* Nav header  */
 .logo-container {
   display: flex;
@@ -12,15 +13,18 @@
   margin-top: 10px;
   margin-left: 17px;
 }
+
 .app-logo {
   width: 50px;
   height: auto;
 }
+
 .logo-text {
   margin-left: 18px;
   font-weight: 600;
   font-size: 25px;
 }
+
 .nav-list {
   display: flex;
   justify-content: flex-end;
@@ -30,28 +34,36 @@
   list-style: none;
   margin-top: -50px;
 }
+
 .nav-list li {
   background-color: #fff;
   margin: 15px;
 }
+
 a {
   text-decoration: none;
 }
+
 /* Nav header END  */
+
 /* Vertical Line  */
 .upbar {
   padding-right: 1rem;
   font-size: 1rem;
   margin-top: 15px;
 }
+
 /* Horizontal Line  */
 .hr {
-  border-top: 1px solid #B3B2B2;
+  border-top: 1px solid #b3b2b2;
   margin-bottom: 12px;
   margin-top: 15px;
   margin-right: 20px;
   margin-left: 20px;
 }
+
+/* MISSIONS */
+
 /* Missions table container */
 .missions-table-container {
   display: flex;
@@ -60,6 +72,22 @@ a {
   margin-right: 20px;
   margin-left: 20px;
 }
+
+/* joined missions */
+.joined-missions-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 40%;
+  margin-left: 20px;
+}
+
+.mission-title {
+  margin-left: 20px;
+}
+
+/* joined missions END */
+
 /* Rocket */
 .rimg {
   width: 300px;
