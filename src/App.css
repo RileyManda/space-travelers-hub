@@ -88,13 +88,22 @@ a {
   margin-left: 20px;
 }
 
+/* Profile */
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
 /* joined missions */
 .joined-missions-container {
+  flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  width: 40%;
-  margin-left: 20px;
+  align-items: flex-start;
+  margin-left: 10px;
+  width: 30%;
 }
 
 .mission-title {
@@ -148,12 +157,12 @@ a {
 }
 
 .rocketImg {
+  flex: 1;
   display: flex;
   height: auto;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-left: -80px;
   margin-right: 45px;
 }
 
@@ -165,4 +174,24 @@ a {
   padding: 2px 3px;
   border-radius: 5px;
   margin-bottom: 2px;
+}
+
+/* Align the reserved rockets section at the end */
+.reserved-rockets-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-left: 40%;
+  margin-right: 5%;
+  width: 30%;
+}
+
+.rocket-title {
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-rocket {
+  margin-left: -364px;
 }
