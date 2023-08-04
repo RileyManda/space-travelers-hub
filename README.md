@@ -64,7 +64,7 @@ Space travelers hub is a full stack web application for a company that provides 
   <ul>
     <li><a href="https://nodejs.org/en/">Node js</a></li>
   </ul>
-</details> -->
+</details>
 
 Features
 
@@ -74,16 +74,16 @@ Features
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-LIVE DEMO -->
-
+<!-- LIVE DEMO -->
+<!-- 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://github.com/RileyManda/space-travelers-hub)
+- [Live Demo Link](https://github.com/RileyManda/space-travelers-hub) -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-?<!-- GETTING STARTED
+<!-- GETTING STARTED
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -243,4 +243,4 @@ I would like to express my sincere gratitude to [Microverse](https://github.com/
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-# Space Travelers Hub
+
