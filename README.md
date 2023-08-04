@@ -52,19 +52,19 @@ Space travelers hub is a full stack web application for a company that provides 
   </ul>
 </details>
 
-<details>
+<!-- <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://redux-toolkit.js.org//">Redux Toolkit</a></li>
+    <li><a href="https://expressjs.com/">Express.js</a></li>
   </ul>
 </details>
 
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://nodejs.org/en/">Node Js</a></li>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
-</details>
+</details> -->
 
 <!-- Features -->
 
@@ -90,10 +90,10 @@ Space travelers hub is a full stack web application for a company that provides 
 To get a local copy up and running, follow these steps.
 
 
+
 ### Prerequisites
 
-In order to run this project you need:<br>
-Node js
+In order to run this project you need:
 
 
 ### Setup
@@ -101,16 +101,21 @@ Node js
 Clone this repository to your desired folder:
 
 
-git clone https://github.com/RileyManda/space-travelers-hub <br>
-cd space-travelers-hub
-
+```sh
+cd my-folder
+git clone https://github.com/RileyManda/book-store.git
+```
 
 
 ### Install
 
-Install this project with:<br>
+Install this project with:
 
+
+```sh
+  cd my-project
   npm i
+```
 
 
 ### Usage
@@ -118,26 +123,33 @@ Install this project with:<br>
 To run the project, execute the following command:
 
 
-
+```sh
   npm start
+```
+
 
 ### Run tests
 
 To run tests, run the following command:
 
-  npm test
 
+
+
+```sh
+  npm test
+```
 
 
 ### Deployment
 
-You can deploy this project using: 
+You can deploy this project using:
     
-
+```sh
     npm run build
-
+```
+ ```sh
     gh-pages deploy --dist build
-
+```
 
 
 
@@ -155,9 +167,9 @@ You can deploy this project using:
 
 👤 **Yared Tekle**
 
-- GitHub: [@yaredtekle](https://github.com/yaredtekle022/)
-- Twitter: [@yaredtekle](https://twitter.com/YaredTekle22/)
-- LinkedIn: [yaredtekle](https://www.linkedin.com/in/yared-tekle-5708ba22b/)
+- GitHub: [@yaredtekle](https://github.com/)
+- Twitter: [@yaredtekle](https://twitter.com/)
+- LinkedIn: [yaredtekle](https://www.linkedin.com/in/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,7 +177,11 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **[Dragons]**
+- [ ] **[Feature 1]**
+- [ ] **[Feature 2]**
+- [ ] **[Feature 3]**
+- [ ] **[Feature 4]**
+- [ ] **[Feature 5]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -238,4 +254,3 @@ I would like to express my sincere gratitude to [Microverse](https://github.com/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 # Space Travelers Hub
-
