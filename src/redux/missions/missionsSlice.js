@@ -11,24 +11,6 @@ export const fetchMissions = createAsyncThunk('missions/fetchMissions', async ()
   }
 });
 
-export const joinMission = createAsyncThunk('missions/joinMission', async (missionName, { getState }) => {
-  const state = getState();
-  const mission = state.missions.missions.find((mission) => mission.mission_name === missionName);
-  if (mission) {
-    return missionName;
-  }
-  throw new Error('Mission not found.');
-});
-
-export const leaveMission = createAsyncThunk('missions/leaveMission', async (missionName, { getState }) => {
-  const state = getState();
-  const mission = state.missions.missions.find((mission) => mission.mission_name === missionName);
-  if (mission) {
-    return missionName;
-  }
-  throw new Error('Mission not found.');
-});
-
 const initialState = {
   missions: [],
   isLoading: false,
@@ -42,6 +24,24 @@ const missionsSlice = createSlice({
     showContent: (state) => {
       const displayText = 'Missions states';
       state.missions = displayText;
+    },
+    joinMission: (state, action) => {
+      const missionName = action.payload;
+      const mission = state.missions.find((mission) => mission.mission_name === missionName);
+      if (mission) {
+        mission.reserved = true;
+      } else {
+        throw new Error('Mission not found.');
+      }
+    },
+    leaveMission: (state, action) => {
+      const missionName = action.payload;
+      const mission = state.missions.find((mission) => mission.mission_name === missionName);
+      if (mission) {
+        mission.reserved = false;
+      } else {
+        throw new Error('Mission not found.');
+      }
     },
   },
   extraReducers: (builder) => {
@@ -57,19 +57,9 @@ const missionsSlice = createSlice({
       .addCase(fetchMissions.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
-      })
-      .addCase(joinMission.fulfilled, (state, action) => {
-        const missionName = action.payload;
-        // eslint-disable-next-line max-len
-        state.missions = state.missions.map((mission) => (mission.mission_name === missionName ? { ...mission, reserved: true } : mission));
-      })
-      .addCase(leaveMission.fulfilled, (state, action) => {
-        const missionName = action.payload;
-        // eslint-disable-next-line max-len
-        state.missions = state.missions.map((mission) => (mission.mission_name === missionName ? { ...mission, reserved: false } : mission));
       });
   },
 });
 
-export const { showContent } = missionsSlice.actions;
+export const { showContent, joinMission, leaveMission } = missionsSlice.actions;
 export default missionsSlice.reducer;
