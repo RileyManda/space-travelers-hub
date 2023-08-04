@@ -178,14 +178,13 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   margin-right: 30px;
-  margin-left: 129px;
+  margin-left: 100px;
   width: 40%;
 }
 
 .rocket-title {
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
