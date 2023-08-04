@@ -41,6 +41,24 @@ test('renders "No joined missions yet." when no missions are available', () => {
       <Profile />
     </Provider>,
   );
+
   const noMissionsElement = screen.getByText('No joined missions yet.');
+
+  expect(noMissionsElement).toBeInTheDocument();
+});
+
+test('No joined rockets reserved', () => {
+  const store = mockStore({
+    rockets: { rockets: [], isLoading: false, error: undefined },
+  });
+
+  render(
+    <Provider store={store}>
+      <Profile />
+    </Provider>,
+  );
+
+  const noMissionsElement = screen.getByText('No rockets reserved.');
+
   expect(noMissionsElement).toBeInTheDocument();
 });
