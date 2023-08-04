@@ -8,8 +8,8 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
-      <h2 className="mission-title">My Missions</h2>
       <div className="joined-missions-container">
+        <h2 className="mission-title">My Missions</h2>
         {joinedMissionsData.length > 0 ? (
           <Table bordered>
             <tbody>
@@ -22,6 +22,22 @@ const Profile = () => {
           </Table>
         ) : (
           <p>No joined missions yet.</p>
+        )}
+      </div>
+      <div className="reserved-rockets-container">
+        <h2 className="rocket-title">My Rockets</h2>
+        {reservedRockets.length > 0 ? (
+          <Table bordered>
+            <tbody>
+              {reservedRockets.map((rocket) => (
+                <tr key={rocket.id}>
+                  <td>{rocket.name}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        ) : (
+          <p className="empty-rocket">No reserved rockets yet.</p>
         )}
       </div>
     </div>
