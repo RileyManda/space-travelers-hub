@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import Logo from './Logo';
 
 const Header = () => {
@@ -13,14 +13,14 @@ const Header = () => {
       </div>
       <ul className="nav-list">
         <li>
-          <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>Rockets</Link>
+          <NavLink to="/" className={location.pathname === '/' ? 'active-link' : ''}>Rockets</NavLink>
         </li>
         <li>
-          <Link to="/missions" className={location.pathname === '/missions' ? 'active-link' : ''}>Missions</Link>
+          <NavLink to="/missions" className={location.pathname === '/missions' ? 'active-link' : ''}>Missions</NavLink>
         </li>
         <span className="upbar">|</span>
         <li>
-          <Link to="/profile" className={location.pathname === '/profile' ? 'active-link' : ''}>My Profile</Link>
+          <NavLink to="/profile" className={location.pathname === '/profile' ? 'active-link' : ''}>My Profile</NavLink>
         </li>
       </ul>
     </nav>
