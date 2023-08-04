@@ -5,7 +5,8 @@ import Table from 'react-bootstrap/Table';
 const Profile = () => {
   const missions = useSelector((state) => state.missions.missions);
   const joinedMissionsData = missions.filter((mission) => mission.reserved);
-
+  const rockets = useSelector((state) => state.rockets.rockets);
+  const reservedRockets = rockets.filter((rocket) => rocket.reserved);
   return (
     <div className="profile-container">
       <div className="joined-missions-container">
