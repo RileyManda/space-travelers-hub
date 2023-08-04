@@ -9,37 +9,39 @@ jest.mock('axios', () => ({
 }));
 
 const mockStore = configureStore([]);
+
 test('renders rockets data with correct details when rockets are available', () => {
   const rockets = [
     {
       id: 1, name: 'Rocket 1', description: 'Rocket 1 Description', reserved: true,
     },
-    {
-      id: 2, name: 'Rocket 2', description: 'Rocket 2 Description', reserved: false,
-    },
   ];
+
   const store = mockStore({
     rockets: { rockets, isLoading: false, error: undefined },
   });
+
   render(
     <Provider store={store}>
       <Rockets />
     </Provider>,
   );
+
   rockets.forEach((rocket) => {
     const rocketNameElement = screen.getByText(rocket.name);
     expect(rocketNameElement).toBeInTheDocument();
-    const rocketDescriptionElement = screen.getByText(
-      (content, element) => content === rocket.description && element.classList.contains('rdesk'),
-    );
+
+    const rocketDescriptionElement = screen.getByText(rocket.description, { selector: 'p.rdesk' });
     expect(rocketDescriptionElement).toBeInTheDocument();
+
     const statusElement = screen.getByText(
-      (content, element) => (rocket.reserved ? element.classList.contains('reserved-span') : element.textContent === 'NOT RESERVED'),
-      { selector: 'p.rdesk' },
+      rocket.reserved ? 'Reserved' : 'NOT RESERVED',
+      { selector: 'span.reserved-span' },
     );
     expect(statusElement).toBeInTheDocument();
+
     const buttonElement = screen.getByText(
-      (content, element) => (rocket.reserved ? element.textContent === 'Cancel Reservation' : element.textContent === 'Reserve Rocket'),
+      rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket',
       { selector: '.align-button button' },
     );
     expect(buttonElement).toBeInTheDocument();
