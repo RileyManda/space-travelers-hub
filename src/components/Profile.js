@@ -9,8 +9,8 @@ const Profile = () => {
   const reservedRockets = rockets.filter((rocket) => rocket.reserved);
   return (
     <div className="profile-container">
-      <h2 className="mission-title">My Missions</h2>
       <div className="joined-missions-container">
+        <h2 className="mission-title">My Missions</h2>
         {joinedMissionsData.length > 0 ? (
           <Table bordered>
             <tbody>
@@ -25,8 +25,8 @@ const Profile = () => {
           <p>No joined missions yet.</p>
         )}
       </div>
-      <h2 className="rocket-title">My Rockets</h2>
       <div className="reserved-rockets-container">
+        <h2 className="rocket-title">My Rockets</h2>
         {reservedRockets.length > 0 ? (
           <Table bordered>
             <tbody>
