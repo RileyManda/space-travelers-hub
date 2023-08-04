@@ -3,10 +3,11 @@ import { useSelector } from 'react-redux';
 import Table from 'react-bootstrap/Table';
 
 const Profile = () => {
-  const missions = useSelector((state) => state.missions.missions);
+  const missions = useSelector((state) => state.missions?.missions || []);
   const joinedMissionsData = missions.filter((mission) => mission.reserved);
-  const rockets = useSelector((state) => state.rockets.rockets);
+  const rockets = useSelector((state) => state.rockets?.rockets || []);
   const reservedRockets = rockets.filter((rocket) => rocket.reserved);
+
   return (
     <div className="profile-container">
       <div className="joined-missions-container">
@@ -38,10 +39,11 @@ const Profile = () => {
             </tbody>
           </Table>
         ) : (
-          <p className="empty-rocket">No reserved rockets yet.</p>
+          <p className="empty-rocket">No rockets reserved.</p>
         )}
       </div>
     </div>
   );
 };
+
 export default Profile;
