@@ -48,25 +48,25 @@ Space travelers hub is a full stack web application for a company that provides 
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://react.dev//">React.js</a></li>
   </ul>
 </details>
 
-<!-- <details>
+<details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://redux-toolkit.js.org/">Redux Toolkit</a></li>
   </ul>
 </details>
 
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://nodejs.org/en/">Node js</a></li>
   </ul>
 </details> -->
 
-<!-- Features -->
+Features
 
 ### Key Features <a name="key-features"></a>
 
@@ -74,16 +74,16 @@ Space travelers hub is a full stack web application for a company that provides 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
+LIVE DEMO -->
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://google.com)
+- [Live Demo Link](https://github.com/RileyManda/space-travelers-hub)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-<!-- GETTING STARTED -->
+?<!-- GETTING STARTED
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -93,18 +93,13 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
-
-
 ### Setup
 
 Clone this repository to your desired folder:
 
 
-```sh
-cd my-folder
-git clone https://github.com/RileyManda/book-store.git
-```
+cd my-folder <br>
+git clone https://github.com/RileyManda/space-travelers-hub
 
 
 ### Install
@@ -112,10 +107,10 @@ git clone https://github.com/RileyManda/book-store.git
 Install this project with:
 
 
-```sh
-  cd my-project
+
+  cd my-project<br>
   npm i
-```
+
 
 
 ### Usage
@@ -123,9 +118,9 @@ Install this project with:
 To run the project, execute the following command:
 
 
-```sh
+
   npm start
-```
+`
 
 
 ### Run tests
@@ -135,27 +130,25 @@ To run tests, run the following command:
 
 
 
-```sh
+
   npm test
-```
+
 
 
 ### Deployment
 
 You can deploy this project using:
     
-```sh
-    npm run build
-```
- ```sh
+
+    npm run build <br>
+
     gh-pages deploy --dist build
-```
 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
+<!-- <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -167,21 +160,18 @@ You can deploy this project using:
 
 👤 **Yared Tekle**
 
-- GitHub: [@yaredtekle](https://github.com/)
-- Twitter: [@yaredtekle](https://twitter.com/)
-- LinkedIn: [yaredtekle](https://www.linkedin.com/in/)
+- GitHub: [@yaredtekle](https://github.com/yaredtekle022/)
+- Twitter: [@yaredtekle](https://twitter.com/YaredTekle22/)
+- LinkedIn: [yaredtekle](https://www.linkedin.com/in/yared-tekle-5708ba22b/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
+<!-- <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Feature 1]**
-- [ ] **[Feature 2]**
-- [ ] **[Feature 3]**
-- [ ] **[Feature 4]**
-- [ ] **[Feature 5]**
+- **[Dragons]**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
