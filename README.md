@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="app-logo-white.png" alt="logo" width="140"  height="auto" />
+  <img src="app-logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Space Travelers' Hub</b></h3>
