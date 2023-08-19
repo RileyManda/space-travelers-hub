@@ -17,7 +17,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  <!-- - [🚀 Live Demo](#live-demo) -->
+    - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -75,11 +75,11 @@ Features
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
-<!-- 
+
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://github.com/RileyManda/space-travelers-hub) -->
+- [Live Demo Link](hhttps://space-travelers-1p70.onrender.com/)
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
